@@ -1,0 +1,25 @@
+{
+    "name": "gtcrais/laravel-persona",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "GTCrais",
+            "email": "tomislav@tmweb.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "GTCrais\\LaravelPersona\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GTCrais\\LaravelPersona\\LaravelPersonaServiceProvider"
+            ]
+        }
+    }
+}

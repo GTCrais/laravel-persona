@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Models;
+
+use GTCrais\LaravelPersona\Models\Contracts\Persona;
+use Illuminate\Database\Eloquent\Model;
+
+class Visitor extends Model implements Persona
+{
+	protected $fillable = [
+		'uuid', 'user_id'
+	];
+
+	public function user()
+	{
+		return $this->belongsTo(User::class);
+	}
+
+	public function isUser(): bool
+	{
+		return false;
+	}
+
+	public function isVisitor(): bool
+	{
+		return true;
+	}
+
+	public function associatedWithUser(User $user)
+	{
+
+	}
+}
