@@ -24,8 +24,8 @@ use App\Http\Middleware\AuthPersona;
 use App\Http\Middleware\EnsurePersonaExists;
 use App\Http\Middleware\ResolvePersona;
 
-$middleware->appendToGroup('web', [ResolvePersona::class, HandleInertiaRequests::class]);
-$middleware->appendToGroup('api', [ResolvePersona::class, HandleInertiaRequests::class]);
+$middleware->appendToGroup('web', [ResolvePersona::class]);
+$middleware->appendToGroup('api', [ResolvePersona::class]);
 $middleware->alias(['authPersona' => AuthPersona::class]);
 ```
 - Upon successful login:
